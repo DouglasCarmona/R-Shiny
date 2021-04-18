@@ -39,7 +39,7 @@ server <- function(input, output, session) {
   output$table_top10 <- DT::renderDataTable(DT::datatable(top10(), 
                                                           caption = htmltools::tags$caption(paste0("Table 1. The 10 most played games in ", input$select_year), 
                                                                                             style = 'color:black; font-size:150%;'),
-                                                          colnames = c("Position" = 1, "Game Name" = 2 , "Peak's Mean" = 3)) %>%
+                                                          colnames = c("Position" = 1, "Game Name" = 2 , "Highest number of players at the same time on average" = 3)) %>%
                                               formatRound(columns = 2, digits = 0)) 
   
   # Updating select box choices depending on the top 10 games results
